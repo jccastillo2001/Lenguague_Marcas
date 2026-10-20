@@ -1,0 +1,124 @@
+/* Estilos base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  color: #222;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1 {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.controles {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+#tarea {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  padding: 10px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #4a90e2;
+  color: white;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #357abd;
+}
+
+/* Lista de tareas */
+#lista {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+#lista li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s;
+}
+
+#lista li button {
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+#lista li button:last-child {
+  background-color: #e74c3c;
+}
+
+#lista li button:last-child:hover {
+  background-color: #c0392b;
+}
+
+/* Clase para tarea completada (Ejercicio 3) */
+.completada {
+  text-decoration: line-through;
+  color: #888;
+  background-color: #f0f0f0 !important;
+}
+
+/* Tema oscuro (Ejercicio 6) */
+body.oscuro {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.oscuro #lista li {
+  background-color: #2d2d2d;
+  color: #f0f0f0;
+}
+
+body.oscuro .completada {
+  color: #777;
+  background-color: #252525 !important;
+}
+
+body.oscuro #tarea {
+  background-color: #2d2d2d;
+  color: #f0f0f0;
+  border-color: #555;
+}
+
+.botones-extra {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.botones-extra button {
+  background-color: #6c757d;
+}
+
+.botones-extra button:hover {
+  background-color: #5a6268;
+}
