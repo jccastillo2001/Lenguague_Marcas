@@ -1,0 +1,18 @@
+/* =====================================================
+   navegacion.css  ->  Barra superior con los enlaces
+   ===================================================== */
+nav {
+  background: white;
+  border-bottom: 1px solid #ddd;
+  padding: 12px 24px;
+  display: flex;          /* pone los elementos en fila */
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;        /* en móvil, salta de línea */
+}
+.logo { font-size: 24px; font-weight: bold; font-style: italic; color: var(--azul); }
+nav a { color: var(--azul); text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+
+/* Esta clase la añade comun.js al enlace de la página actual */
+nav a.activo { font-weight: bold; border-bottom: 2px solid var(--azul); }

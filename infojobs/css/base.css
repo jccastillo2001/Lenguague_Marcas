@@ -1,0 +1,38 @@
+/* =====================================================
+   base.css  ->  Estilos GENERALES de toda la web
+   Se carga primero porque define las variables (colores)
+   que usan los demás archivos CSS.
+   ===================================================== */
+
+/* Variables: cambia un color aquí y cambia en toda la web */
+:root {
+  --azul: #0b4fd3;
+  --azul-oscuro: #093ea8;
+  --fondo: #f5f6f8;
+  --texto: #111;
+  --borde: #999;
+}
+
+/* Hace que el padding no agrande las cajas */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+}
+
+/* Contenedor central de cada página */
+main { max-width: 900px; margin: 32px auto; padding: 0 16px; }
+
+/* Tarjeta blanca redondeada (como en InfoJobs) */
+.tarjeta {
+  background: white;
+  border-radius: 24px;
+  padding: 32px;
+  max-width: 520px;
+  margin: 0 auto;
+}
+.tarjeta.ancha { max-width: 100%; }   /* variante para el currículum */
+h1 { margin-top: 0; }

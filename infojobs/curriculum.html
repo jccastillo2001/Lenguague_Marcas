@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi currículum - MiEmpleo</title>
+  <!-- CSS: el orden importa, base.css define las variables -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navegacion.css">
+  <link rel="stylesheet" href="css/formularios.css">
+</head>
+<body>
+  <!-- Barra superior (se repite igual en cada página) -->
+  <nav>
+    <span class="logo">MiEmpleo</span>
+    <a href="index.html">Inicio</a>
+    <a href="login.html">Iniciar sesión</a>
+    <a href="registro.html">Crear cuenta</a>
+    <a href="curriculum.html">Mi currículum</a>
+  </nav>
+
+  <main>
+    <div class="tarjeta ancha">
+      <h1>Mi currículum</h1>
+      <form id="form-cv">
+        <div class="columnas">
+          <div><label for="cv-nombre">Nombre completo</label>
+               <input type="text" id="cv-nombre" required></div>
+          <div><label for="cv-puesto">Puesto que buscas</label>
+               <input type="text" id="cv-puesto" placeholder="Ej: Desarrollador web" required></div>
+          <div><label for="cv-ciudad">Ciudad</label>
+               <input type="text" id="cv-ciudad"></div>
+          <div><label for="cv-telefono">Teléfono</label>
+               <input type="tel" id="cv-telefono"></div>
+        </div>
+
+        <label for="cv-resumen">Sobre ti</label>
+        <textarea id="cv-resumen" rows="3"></textarea>
+
+        <label for="cv-experiencia">Experiencia laboral</label>
+        <textarea id="cv-experiencia" rows="4"></textarea>
+
+        <label for="cv-formacion">Formación</label>
+        <textarea id="cv-formacion" rows="3"></textarea>
+
+       <label for="cv-archivo">Subir Currículum (PDF o Word):</label>
+<input type="file" id="cv-archivo" name="cv-archivo" accept=".pdf, .doc, .docx">
+
+
+        <label for="cv-habilidades">Habilidades (separadas por comas)</label>
+        <input type="text" id="cv-habilidades" placeholder="HTML, CSS, JavaScript">
+
+        <button type="submit">Guardar currículum</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- JS al final del body: así el HTML ya existe cuando el código lo busca -->
+  <script src="js/comun.js"></script>
+  <script src="js/curriculum.js"></script>
+</body>
+</html>

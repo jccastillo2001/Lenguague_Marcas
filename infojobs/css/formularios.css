@@ -1,0 +1,46 @@
+/* =====================================================
+   formularios.css  ->  Campos, botones y barra de seguridad
+   ===================================================== */
+label { display: block; margin: 16px 0 6px; }
+
+input, textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: inherit;
+}
+input:focus, textarea:focus { outline: 2px solid var(--azul); }
+
+/* Casilla + texto en una misma fila */
+.check { display: flex; gap: 8px; align-items: center; margin: 16px 0; }
+.check input { width: auto; }
+.check label { margin: 0; }
+
+/* Botón en forma de píldora */
+button, .boton {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background: var(--azul);
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 16px;
+}
+button:hover, .boton:hover { background: var(--azul-oscuro); }
+
+/* Barra de seguridad de la contraseña: 3 trocitos */
+.seguridad { display: flex; gap: 6px; margin-top: 8px; }
+.seguridad span { flex: 1; height: 8px; border-radius: 4px; background: #d3d3d9; }
+.seguridad span.activo { background: var(--azul); }  /* lo pone registro.js */
+
+/* Dos columnas en el currículum (una sola en móvil) */
+.columnas { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
+@media (max-width: 600px) { .columnas { grid-template-columns: 1fr; } }

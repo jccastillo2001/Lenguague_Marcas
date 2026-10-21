@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iniciar sesión - MiEmpleo</title>
+  <!-- CSS: el orden importa, base.css define las variables -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navegacion.css">
+  <link rel="stylesheet" href="css/formularios.css">
+</head>
+<body>
+  <!-- Barra superior (se repite igual en cada página) -->
+  <nav>
+    <span class="logo">MiEmpleo</span>
+    <a href="index.html">Inicio</a>
+    <a href="login.html">Iniciar sesión</a>
+    <a href="registro.html">Crear cuenta</a>
+    <a href="curriculum.html">Mi currículum</a>
+  </nav>
+
+  <main>
+    <div class="tarjeta">
+      <h1>Accede como candidato/a</h1>
+      <form id="form-login">
+        <label for="login-email">Email</label>
+        <input type="email" id="login-email" required>
+
+        <label for="login-pass">Contraseña</label>
+        <input type="password" id="login-pass" required>
+
+        <div class="check">
+          <input type="checkbox" id="recordar" checked>
+          <label for="recordar">Mantener mi sesión abierta</label>
+        </div>
+
+        <button type="submit">Iniciar sesión</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- JS al final del body: así el HTML ya existe cuando el código lo busca -->
+  <script src="js/comun.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
